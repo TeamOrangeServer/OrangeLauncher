@@ -1,0 +1,32 @@
+apply plugin: 'com.github.johnrengelman.shadow'
+
+jar {
+    manifest {
+        attributes("Main-Class": "com.skcraft.launcher.Bootstrap")
+        attributes("SplashScreen-Image": "com/skcraft/launcher/splashscreen.png")
+    }
+}
+
+dependencies {
+    compile 'org.projectlombok:lombok:1.12.2'
+    compile 'com.googlecode.json-simple:json-simple:1.1.1'
+}
+
+processResources {
+	inputs.property 'project.version', project.version
+    filesMatching('**/*.properties') {
+        filter {
+            it.replace('${project.version}', project.version)
+        }
+    }
+}
+
+shadowJar {
+    dependencies {
+        exclude(dependency('org.projectlombok:lombok'))
+        exclude(dependency('junit:junit'))
+        exclude(dependency('org.hamcrest:hamcrest-core'))
+    }
+}
+
+build.dependsOn(shadowJar)
