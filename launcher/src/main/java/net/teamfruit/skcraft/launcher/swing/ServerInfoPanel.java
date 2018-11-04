@@ -18,12 +18,12 @@ import com.google.common.util.concurrent.ListenableFuture;
 import com.skcraft.launcher.util.SharedLocale;
 import com.skcraft.launcher.util.SwingExecutor;
 
+import lombok.Builder;
 import lombok.Data;
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
-import lombok.experimental.Builder;
 import lombok.extern.java.Log;
 import net.teamfruit.skcraft.launcher.mcpinger.PingResult;
 import net.teamfruit.skcraft.launcher.mcpinger.PingResult.Description;
@@ -180,7 +180,7 @@ public class ServerInfoPanel {
 		return builder.build();
 	}
 
-	@Builder(fluent = true)
+	@Builder
 	@Data
 	private static class InfoMessage {
 		private InfoMessageStatus status;

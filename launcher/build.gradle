@@ -8,7 +8,7 @@ jar {
 }
 
 dependencies {
-    compile 'org.projectlombok:lombok:1.12.2'
+    compile 'org.projectlombok:lombok:1.18.2'
     compile 'javax.xml.bind:jaxb-api:2.2.4'
     compile 'com.fasterxml.jackson.core:jackson-databind:2.3.0'
     compile 'commons-lang:commons-lang:2.6'
@@ -19,11 +19,13 @@ dependencies {
     compile 'com.google.code.findbugs:jsr305:3.0.0'
     //compile 'com.jagrosh:DiscordIPC:0.3'
     compile 'com.github.Kamesuta:DiscordIPC:0.3.4'
+    compile 'net.java.dev.jna:jna:4.5.2'
+    compile 'net.java.dev.jna:jna-platform:4.5.2'
     compileOnly 'com.yuvimasory:orange-extensions:1.3.0'
 }
 
 processResources {
-	inputs.property 'project.version', project.version
+    inputs.property 'project.version', project.version
     filesMatching('**/*.properties') {
         filter {
             it.replace('${project.version}', project.version)

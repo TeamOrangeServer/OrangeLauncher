@@ -86,6 +86,7 @@ public class ConfigurationDialog extends JDialog {
 	private final JCheckBox serverEnabledCheck = new JCheckBox(SharedLocale.tr("options.serverEnabled"));
 	private final JTextField serverHostText = new JTextField();
 	private final JSpinner serverPortSpinner = new JSpinner();
+	private final JCheckBox discordPingCheck = new JCheckBox(SharedLocale.tr("options.discordPing"));
 	private final FormPanel proxySettingsPanel = new FormPanel();
 	private final JCheckBox useProxyCheck = new JCheckBox(SharedLocale.tr("options.useProxyCheck"));
 	private final JTextField proxyHostText = new JTextField();
@@ -165,6 +166,7 @@ public class ConfigurationDialog extends JDialog {
 		mapper.map(serverEnabledCheck, "serverEnabled");
 		mapper.map(serverHostText, "serverHost");
 		mapper.map(serverPortSpinner, "serverPort");
+		mapper.map(discordPingCheck, "discordPing");
 		mapper.map(useProxyCheck, "proxyEnabled");
 		mapper.map(proxyHostText, "proxyHost");
 		mapper.map(proxyPortText, "proxyPort");
@@ -197,6 +199,7 @@ public class ConfigurationDialog extends JDialog {
 		gameSettingsPanel.addRow(serverEnabledCheck);
 		gameSettingsPanel.addRow(new JLabel(SharedLocale.tr("options.serverHost")), serverHostText);
 		gameSettingsPanel.addRow(new JLabel(SharedLocale.tr("options.serverPort")), serverPortSpinner);
+		gameSettingsPanel.addRow(discordPingCheck);
 		SwingHelper.removeOpaqueness(gameSettingsPanel);
 		tabbedPane.addTab(SharedLocale.tr("options.minecraftTab"), SwingHelper.alignTabbedPane(gameSettingsPanel));
 

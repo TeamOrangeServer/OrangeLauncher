@@ -125,7 +125,7 @@ public final class Launcher {
 			@Getter private final File baseDir = argBaseDir;
 		};
 
-		LauncherDiscord.init(directories);
+		LauncherDiscord.init(this.config);
 
         DefaultFont.configUIFont();
 

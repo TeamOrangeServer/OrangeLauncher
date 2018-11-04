@@ -44,6 +44,7 @@ public class Configuration {
     private boolean serverEnabled = false;
     private String serverHost;
     private int serverPort = 25565;
+    private boolean discordPing = true;
     private String pathCommonDataDir = OptionLauncherDirectories.DefaultPathCommonDataDir;
     private String pathInstancesDir = OptionLauncherDirectories.DefaultPathInstancesDir;
 
