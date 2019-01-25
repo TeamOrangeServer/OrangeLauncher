@@ -1,0 +1,56 @@
+{
+    // IntelliSense を使用して利用可能な属性を学べます。
+    // 既存の属性の説明をホバーして表示します。
+    // 詳細情報は次を確認してください: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Creator<creator-tools>",
+            "request": "launch",
+            "mainClass": "com.skcraft.launcher.creator.Creator",
+            "projectName": "creator-tools"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Bootstrap<launcher-bootstrap>",
+            "request": "launch",
+            "mainClass": "com.skcraft.launcher.Bootstrap",
+            "projectName": "launcher-bootstrap"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-PackageBuilder<launcher-builder>",
+            "request": "launch",
+            "mainClass": "com.skcraft.launcher.builder.PackageBuilder",
+            "projectName": "launcher-builder"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ServerCopyExport<launcher-builder>",
+            "request": "launch",
+            "mainClass": "com.skcraft.launcher.builder.ServerCopyExport",
+            "projectName": "launcher-builder"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-FancyLauncher<launcher-fancy>",
+            "request": "launch",
+            "mainClass": "com.skcraft.launcher.FancyLauncher",
+            "projectName": "launcher-fancy"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Launcher<launcher>",
+            "request": "launch",
+            "mainClass": "com.skcraft.launcher.Launcher",
+            "projectName": "launcher"
+        }
+    ]
+}
