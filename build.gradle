@@ -23,7 +23,7 @@ subprojects {
     apply plugin: 'eclipse'
 
     group = 'com.skcraft'
-    version = '3.0.0-pre1--no-bootstrap'
+    version = '3.5.0'
 
     sourceCompatibility = 1.6
     targetCompatibility = 1.6
