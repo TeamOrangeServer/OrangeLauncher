@@ -51,7 +51,7 @@ public class LauncherArguments {
 					uripath = StringUtils.substringBetween(uripath, "'");
 				URI uri = new URI(uripath);
 				String scheme = uri.getScheme();
-				if (StringUtils.isEmpty(scheme)||StringUtils.equalsIgnoreCase(scheme, "fruitlauncher")) {
+				if (StringUtils.isEmpty(scheme)||StringUtils.equalsIgnoreCase(scheme, "orangelauncher")) {
 					String host = uri.getHost();
 					String path = uri.getPath();
 					if (!StringUtils.isEmpty(path))

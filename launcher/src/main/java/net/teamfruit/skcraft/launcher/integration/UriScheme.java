@@ -87,13 +87,13 @@ public class UriScheme {
 						}
 
 					log.info("Installing URL Protocol...");
-					WinRegistry.createKey(WinRegistry.HKEY_CURRENT_USER, "Software\\Classes\\fruitlauncher");
-					WinRegistry.createKey(WinRegistry.HKEY_CURRENT_USER, "Software\\Classes\\fruitlauncher\\DefaultIcon");
-					WinRegistry.createKey(WinRegistry.HKEY_CURRENT_USER, "Software\\Classes\\fruitlauncher\\shell\\open\\command");
-					WinRegistry.writeStringValue(WinRegistry.HKEY_CURRENT_USER, "Software\\Classes\\fruitlauncher", "", "URL:FruitLauncher Protocol");
-					WinRegistry.writeStringValue(WinRegistry.HKEY_CURRENT_USER, "Software\\Classes\\fruitlauncher", "URL Protocol", "");
-					WinRegistry.writeStringValue(WinRegistry.HKEY_CURRENT_USER, "Software\\Classes\\fruitlauncher\\DefaultIcon", "", iconPath.getCanonicalPath());
-					WinRegistry.writeStringValue(WinRegistry.HKEY_CURRENT_USER, "Software\\Classes\\fruitlauncher\\shell\\open\\command", "", joinCommand(builder.buildCommand()));
+					WinRegistry.createKey(WinRegistry.HKEY_CURRENT_USER, "Software\\Classes\\orangelauncher");
+					WinRegistry.createKey(WinRegistry.HKEY_CURRENT_USER, "Software\\Classes\\orangelauncher\\DefaultIcon");
+					WinRegistry.createKey(WinRegistry.HKEY_CURRENT_USER, "Software\\Classes\\orangelauncher\\shell\\open\\command");
+					WinRegistry.writeStringValue(WinRegistry.HKEY_CURRENT_USER, "Software\\Classes\\orangelauncher", "", "URL:OrangeLauncher Protocol");
+					WinRegistry.writeStringValue(WinRegistry.HKEY_CURRENT_USER, "Software\\Classes\\orangelauncher", "URL Protocol", "");
+					WinRegistry.writeStringValue(WinRegistry.HKEY_CURRENT_USER, "Software\\Classes\\orangelauncher\\DefaultIcon", "", iconPath.getCanonicalPath());
+					WinRegistry.writeStringValue(WinRegistry.HKEY_CURRENT_USER, "Software\\Classes\\orangelauncher\\shell\\open\\command", "", joinCommand(builder.buildCommand()));
 				}
 			} catch (Throwable ignored) {
 				ignored.printStackTrace();
@@ -123,15 +123,15 @@ public class UriScheme {
 
 					log.info("Installing URL Protocol...");
 
-					File file = new File(launcher.getTemporaryDir(), "fruitlauncher.desktop");
+					File file = new File(launcher.getTemporaryDir(), "orangelauncher.desktop");
 					String content = "[Desktop Entry]\n"+
-							"Name=FruitLauncher\n"+
+							"Name=OrangeLauncher\n"+
 							"Exec="+joinCommand(builder.buildCommand())/*.replace("\\", "\\\\").replace("\"", "\\\"")*/ +"\n"+
 							"Icon=fruitlauncher\n"+
 							"Type=Application\n"+
 							"Terminal=false\n"+
 							"NoDisplay=true\n"+
-							"MimeType=x-scheme-handler/fruitlauncher;";
+							"MimeType=x-scheme-handler/orangelauncher;";
 
 					Files.write(content, file, Charset.forName("UTF-8"));
 
