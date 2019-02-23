@@ -50,9 +50,11 @@ public class AboutDialog extends JDialog {
         container.add(new JLabel("<html>Fruit LauncherはSKCraft Launcherをベースに作成されています。"), "wrap, gapbottom unrel");
 
         JButton okButton = new JButton("OK");
-        JButton sourceCodeButton = new JButton("Website");
+        JButton sourceCodeButton = new JButton("Website(SKCraft)");
+	JButton OrangeWebButton = new JButton("Website");
 
         container.add(sourceCodeButton, "span, split 3, sizegroup bttn");
+        container.add(OrangeWebButton, "span, split 4, sizegroup bttn");
         container.add(okButton, "tag ok, sizegroup bttn");
 
         add(container, BorderLayout.CENTER);
@@ -62,6 +64,7 @@ public class AboutDialog extends JDialog {
 
         okButton.addActionListener(ActionListeners.dispose(this));
         sourceCodeButton.addActionListener(ActionListeners.openURL(this, "https://github.com/SKCraft/Launcher"));
+	OrangeWebButton.addActionListener(ActionListeners.openURL(this, "https://teamorangeserver.github.io/OrangeLauncher-Repository/"));
 
         addWindowListener(new WindowAdapter() {
         	@Override
