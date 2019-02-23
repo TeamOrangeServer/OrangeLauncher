@@ -21,6 +21,7 @@ import net.teamfruit.skcraft.launcher.windowdetector.ActiveWindowDetector;
 
 @Log
 public class LauncherDiscord {
+	private static final long _479257307885207562L = 479257307885207562L;
 	@Nullable
 	private static LauncherDiscord instance;
 
@@ -37,14 +38,15 @@ public class LauncherDiscord {
 	private final Configuration config;
 	private final IPCClient client;
 
-	private DiscordRichPresence lastPresence = DiscordStatus.DEFAULT.createRPC(new DiscordRichPresence(), ImmutableMap.<String, String> of());
+	private DiscordRichPresence lastPresence = DiscordStatus.DEFAULT.createRPC(new DiscordRichPresence(),
+			ImmutableMap.<String, String>of());
 
 	private LauncherDiscord(final Configuration config) throws Exception {
 		this.config = config;
 
 		log.info("[DiscordRPC] initializing.");
-//		client = new IPCClient(425297966069317632L);
-		client = new IPCClient(479257307885207562L);
+		// client = new IPCClient(425297966069317632L);
+		client = new IPCClient(_479257307885207562L);
 
 		client.setListener(new IPCListener() {
 			@Override
